@@ -1,4 +1,7 @@
 #include "main.h"
+
+char *upper_string(char *);
+int lower_case(char);
 /**
  * spec_hex_u - output in hexadecimal format
  * @uup: bese 10 number
@@ -24,7 +27,7 @@ int spec_hex_u(va_list uup)
  **/
 int lower_case(char s)
 {
-	return (s >= 'a' && c <= 'z');
+	return (s >= 'a' && s <= 'z');
 }
 /**
  * upper_string - change to upper case
@@ -39,7 +42,7 @@ char *upper_string(char *d)
 	{
 		if (lower_case(d[i]))
 		{
-			s[i] = s[i] - 32;
+			d[i] = d[i] - 32;
 		}
 	}
 	return (d);

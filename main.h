@@ -23,13 +23,17 @@ int _putchar(char c);
 int bufer(char c);
 
 /* percent handler pointers */
-int spec_c(va_list ptr);
-int spec_int(va_list num);
-int spec_s(va_list str);
-int spec_rev_s(va_list, num);
-int spec_p(va_list, num);
-int comp_str(char *s, char *c);
-int spec_o
+int spec_c(va_list);
+int spec_int(va_list);
+int spec_s(va_list);
+int spec_rev_s(va_list);
+int spec_p(va_list);
+int spec_b(va_list);
+int spec_hex_l(va_list);
+int spec_hex_u(va_list);
+int spec_rot(va_list);
+int spec_u(va_list);
+int spec_o(va_list);
 /**
  * struct print_sel - point to spc and fun_spc
  * @spc: char input
@@ -38,7 +42,7 @@ int spec_o
 struct print_sel
 {
 	char spc;
-	void (*func_spc)(va_list);
+	int (*func_spc)(va_list);
 };
 
 /**

@@ -1,4 +1,5 @@
 #include "main.h"
+int comp_str(char *, char *);
 /**
  * spec_p - hexadecimal format
  * @num: input va_list
@@ -10,7 +11,7 @@ int spec_p(va_list num)
 	char *son;
 	int b;
 
-	son = _itoa(va_arg(son, unsigned long int), 16);
+	son = _itoa(va_arg(num, unsigned long int), 16);
 
 	if (!comp_str(son, "0"))
 		return (display("(nil)"));
@@ -18,7 +19,7 @@ int spec_p(va_list num)
 	if (!comp_str(son, "-1"))
 		b += display("ffffffffffffffff");
 	else
-		b += display(sun);
+		b += display(son);
 	return (b);
 }
 /**

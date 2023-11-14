@@ -23,7 +23,7 @@ int bufer(char c)
 	if (c == -1 || a == 1024)
 	{
 		write(1, buff, a);
-		i = 0;
+		a = 0;
 	}
 
 	if (c != -1)

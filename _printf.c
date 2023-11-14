@@ -17,9 +17,9 @@ int _printf(const char *format, ...)
 		return (0);
 
 	va_start(ptr, format);
-	len = specifires(format, ptr);
+	len = format_handle(format, ptr);
 
-	_putchar(-1)
+	_putchar(-1);
 	va_end(ptr);
 
 	return (len);

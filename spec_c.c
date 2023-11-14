@@ -10,6 +10,6 @@ int spec_c(va_list ptr)
 	int a;
 
 	a = va_arg(ptr, int);
-	_putchar(1, &a, 4);
+	_putchar(a);
 	return (1);
 }

@@ -10,7 +10,7 @@ int spec_rev_s(va_list num)
 	const char *son;
 	int b, i;
 
-	son = va_arg(b, const char*);
+	son = va_arg(num, const char *);
 	b = str_len(son);
 	for (i = b - 1; i >= 0; i--)
 		_putchar(son[i]);

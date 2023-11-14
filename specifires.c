@@ -11,7 +11,7 @@ int format_handle(const char *format_s, va_list args_list)
 	int total_size, i, size;
 
 	total_size = 0;
-	for (i = 0; format_s[i] != 0;; i++)
+	for (i = 0; format_s[i] != 0; i++)
 	{
 		if (format_s[i] == '%')
 		{
@@ -61,7 +61,7 @@ int print_specifier(const char *next, va_list ptr, int *index)
 	{
 		if (next[*index] == fuPt[j].spc)
 		{
-			size = fuPt[j].func_spc[ptr];
+			size = fuPt[j].func_spc(ptr);
 			return (size);
 		}
 	}

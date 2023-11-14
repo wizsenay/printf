@@ -8,7 +8,7 @@
 int rot_print(char *str)
 {
 	int i, j;
-	char *s1, s2;
+	char *s1, *s2;
 
 	s1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	s2 = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
@@ -16,14 +16,14 @@ int rot_print(char *str)
 	{
 		for (j = 0; s1[j] != '\0'; j++)
 		{
-			if (s[i] == s1[j])
+			if (str[i] == s1[j])
 			{
 				_putchar(s2[j]);
 				break;
 			}
 		}
 		if (!s1[j])
-			_putchar(s[i]);
+			_putchar(str[i]);
 	}
 	return (i);
 }
@@ -38,6 +38,6 @@ int spec_rot(va_list num)
 	int b;
 
 	s = va_arg(num, char *);
-	b = rot_print((s != NULL) ? b : "(ahyy)");
+	b = rot_print((s != NULL) ? s : "(ahyy)");
 	return (b);
 }
