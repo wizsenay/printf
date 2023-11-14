@@ -2,11 +2,14 @@
 /**
  * spec_int - prints integer
  * @num: number to print
- *
- */
-void spec_int(va_list num)
+ * Return: the length of the number in base 10
+ **/
+int spec_int(va_list num)
 {
 	int n;
-	n = va_arg(num, int);
-	write(1, &n, 4);
-}	
+	char *buf;
+
+	buf = _itoa(va_arg(num, int), 10);
+	n = display((buf != NULL) ? buf : "NULL");
+	return (n);
+}

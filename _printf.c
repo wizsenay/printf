@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 /**
  * _printf - produces output according to a format.
@@ -9,26 +8,19 @@
 int _printf(const char *format, ...)
 {
 	va_list ptr;
-	int i, j, k = 0;
+	int len;
 
-	j = 0;
+	if (format == NULL)
+		return (-1);
+	len = str_len(format);
+	if (len <= 0)
+		return (0);
+
 	va_start(ptr, format);
-	while (format[j])
-		j++;
-	for (i = 0; i < j; i++)
-	{
-		if (format[i] == '%')
-		{
-			print_specifier(format[i + 1], ptr);
-			k++;
-			i++;
-		}
-		else
-		{
-			write(1, &format[i], 1);
-			k++;
-		}
-	}
+	len = specifires(format, ptr);
+
+	_putchar(-1)
 	va_end(ptr);
-	return (k - 1);
+
+	return (len);
 }
