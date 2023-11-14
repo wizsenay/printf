@@ -11,11 +11,11 @@ int main(void)
 {
 	char age = '3';
 	char name[] = "jhon";
-	int s;
+	int s = 2;
 
-	printf("what %j name?\n", age);
-	s = _printf("Character:[%c]\n", 'H');
-	printf("%d\n", s);
+	printf("what %c name?\n", age);
+	/*s = _printf("Character:[%c]\n", 'H');*/
+	_printf("%i\n", s);
     printf("Character:[%c]\n", 'H');
     _printf("String:[%s]\n", "I am a string !");
     printf("String:[%s]\n", "I am a string !");
